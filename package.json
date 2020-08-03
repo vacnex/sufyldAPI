@@ -1,0 +1,20 @@
+{
+  "name": "sufyldapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "devstart": "nodemon run app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "joi": "^17.1.1",
+    "mssql": "^6.2.1",
+    "nodemon": "^2.0.4",
+    "tedious": "^9.0.1"
+  }
+}
