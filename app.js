@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var port = process.env.port || 3000;
+// var port = process.env.PORT;
 
 var bodyParser = require('body-parser');
 // create application/x-www-form-urlencoded parser
@@ -19,7 +19,7 @@ app.use(function (req, res, next) {
 var accountsController = require('./Controller/accountsController')();
 app.use("/api/accounts", accountsController);
 
-app.listen(port, function () {
-    var message = "Server runnning on Port: http://localhost:" + port
-    console.log(message);
+var server = app.listen(process.env.PORT || 5000, function () {
+    var port = server.address().port;
+    console.log("Express is working on port " + port);
 });
